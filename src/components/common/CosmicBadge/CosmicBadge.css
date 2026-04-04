@@ -1,0 +1,44 @@
+.cosmic-badge {
+  position: fixed;
+  bottom: var(--space-5);
+  right: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  width: 180px;
+  background: #11171A;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  z-index: 50;
+  transition: background var(--transition-base);
+}
+
+.cosmic-badge:hover {
+  background: #1a2326;
+}
+
+.cosmic-badge__dismiss {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color-surface-600);
+  color: white;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  z-index: 10;
+  transition: background var(--transition-fast);
+}
+
+.cosmic-badge__dismiss:hover {
+  background: var(--color-surface-700);
+}

@@ -1,0 +1,28 @@
+.load-more-grid__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-10);
+  gap: var(--space-4);
+}
+
+.load-more-grid__sentinel {
+  height: 1px;
+  width: 100%;
+}
+
+.load-more-grid__btn {
+  gap: var(--space-3);
+}
+
+.load-more-grid__count {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+.load-more-grid__empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--space-8) 0;
+}

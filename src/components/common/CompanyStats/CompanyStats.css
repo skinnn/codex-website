@@ -1,0 +1,39 @@
+.company-stats {
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+}
+
+.company-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-6);
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+  .company-stats__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 639px) {
+  .company-stats__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.company-stats__item {
+  text-align: center;
+}
+
+.company-stats__value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--brand-400);
+}
+
+.company-stats__label {
+  margin-top: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-normal);
+}

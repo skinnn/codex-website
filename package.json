@@ -1,0 +1,37 @@
+{
+  "name": "codex-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "prebuild": "bun run type-check",
+    "postbuild": "node scripts/inject-console-capture.js"
+  },
+  "dependencies": {
+    "@cosmicjs/sdk": "^1.6.0",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "marked": "^17.0.5",
+    "next": "16.0.10",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "react-markdown": "^9.0.1",
+    "three": "^0.183.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "@types/three": "^0.183.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.0.10",
+    "glob": "^10.3.10",
+    "postcss": "^8.4.49",
+    "typescript": "^5.6.0"
+  }
+}
