@@ -5,17 +5,28 @@
  * To update live SEO, edit the SEO Metadata objects in the CosmicJS dashboard.
  */
 
-export interface SEODefaults {
-  title: string
-  description: string
-}
+import { Metadata } from 'next'
+
+// export interface SEODefaults {
+//   title: string
+//   description: string
+// }
 
 type PageKey = 'home' | 'projects' | 'design' | 'caseStudies' | 'services' | 'about' | 'contact' | 'blog'
 
-export const seoDefaults: Record<PageKey, SEODefaults> = {
+export const seoDefaults: Record<PageKey, Metadata> = {
   home: {
     title: 'CodeX — Web Development, UI/UX Design, Consulting and Digital Strategy Agency',
     description: 'CodeX is a digital agency specializing in web development, UI/UX design, and digital strategy. We turn ambitious ideas into exceptional digital experiences.',
+    icons: {
+      icon: '/favicon.svg',
+      shortcut: '/shortcut.svg',
+      apple: '/favicon.svg',
+      // other: {
+      //   rel: 'apple-touch-icon-precomposed',
+      //   url: '/apple-touch-icon-precomposed.png',
+      // },
+    },
   },
   projects: {
     title: 'Projects | CodeX',
