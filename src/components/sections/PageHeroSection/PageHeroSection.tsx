@@ -1,13 +1,13 @@
-import './PageHero.css'
+import './PageHeroSection.css'
 import type { ReactNode } from 'react'
 
-interface PageHeroProps {
+interface PageHeroSectionProps {
   title: string
   subtitle?: string
   animation?: ReactNode
 }
 
-export default function PageHero({ title, subtitle, animation }: PageHeroProps) {
+export default function PageHeroSection({ title, subtitle, animation }: PageHeroSectionProps) {
   const hasAnimation = !!animation
 
   return (

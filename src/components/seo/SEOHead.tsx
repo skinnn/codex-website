@@ -3,7 +3,7 @@ import type { SEOMetadata } from '@/types'
 
 export function generateSEOMetadata(
   seo: SEOMetadata | null,
-  fallback: { title: string; description: string }
+  fallback: Metadata
 ): Metadata {
   if (!seo) {
     return {
@@ -13,8 +13,8 @@ export function generateSEOMetadata(
   }
 
   const { metadata } = seo
-  const title = metadata.meta_title || fallback.title
-  const description = metadata.meta_description || fallback.description
+  const title = metadata.meta_title || (typeof fallback.title === 'string' ? fallback.title : undefined)
+  const description = metadata.meta_description || (typeof fallback.description === 'string' ? fallback.description : undefined)
 
   const result: Metadata = {
     title,
@@ -22,6 +22,7 @@ export function generateSEOMetadata(
     keywords: metadata.keywords || undefined,
     robots: metadata.robots?.value || 'index,follow',
     openGraph: {
+      type: 'website',
       title: metadata.og_title || title,
       description: metadata.og_description || description,
       images: metadata.og_image ? [{ url: metadata.og_image.imgix_url }] : undefined,

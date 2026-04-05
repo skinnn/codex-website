@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { cosmic } from '@/lib/cosmic'
-import PageHero from '@/src/components/layout/PageHero/PageHero'
+import PageHeroSection from '@/src/components/sections/PageHeroSection/PageHeroSection'
 
 export const metadata: Metadata = {
   title: 'Blog | CodeX',
@@ -37,7 +37,7 @@ export default async function BlogPage() {
 
   return (
     <>
-      <PageHero title="Blog" subtitle="Insights on web development, design, SEO, and building digital products." />
+      <PageHeroSection title="Blog" subtitle="Insights on web development, design, SEO, and building digital products." />
       <section className="section">
         <div className="container" style={{ maxWidth: '48rem' }}>
           {posts.length > 0 ? (

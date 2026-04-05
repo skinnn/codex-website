@@ -18,6 +18,7 @@ export default function TeamCard({ member }: TeamCardProps) {
               alt={name}
               width={128}
               height={128}
+              loading="lazy"
               className="team-card__photo"
             />
           </div>

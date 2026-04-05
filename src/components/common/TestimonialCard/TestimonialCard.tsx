@@ -22,6 +22,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
             alt={client_name}
             width={48}
             height={48}
+            loading="lazy"
             className="testimonial__photo"
           />
         )}

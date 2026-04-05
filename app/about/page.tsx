@@ -1,6 +1,6 @@
 import { seoDefaults } from '@/src/config/seo-defaults'
 import type { Metadata } from 'next'
-import PageHero from '@/src/components/layout/PageHero/PageHero'
+import PageHeroSection from '@/src/components/sections/PageHeroSection/PageHeroSection'
 import SchemaMarkup from '@/src/components/seo/SchemaMarkup'
 import { generateSEOMetadata } from '@/src/components/seo/SEOHead'
 import { getTeamMembers, getSiteSettings, getSEOByPage } from '@/lib/cosmic'
@@ -18,7 +18,7 @@ export default async function AboutPage() {
   return (
     <>
       <SchemaMarkup seo={seo} pageName="About" />
-      <PageHero title="About CodeX" subtitle="Founded in 2019. Developers and designers passionate about building exceptional digital products." />
+      <PageHeroSection title="About CodeX" subtitle="Founded in 2019. Developers and designers passionate about building exceptional digital products." />
 
       {/* Story */}
       <section className="section">

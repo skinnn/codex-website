@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import './CompanyStats.css'
+import './CompanyStatsSection.css'
 
 const stats = [
   { value: '8+', label: 'Years Experience', numericValue: 8 },
@@ -73,7 +73,7 @@ function AnimatedStat({ value, numericValue, label }: { value: string; numericVa
   )
 }
 
-export default function CompanyStats() {
+export default function CompanyStatsSection() {
   return (
     <section className="company-stats">
       <div className="container">

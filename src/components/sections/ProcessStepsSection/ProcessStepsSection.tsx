@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import './ProcessSteps.css'
+import './ProcessStepsSection.css'
 
 const steps = [
   { number: '01', title: 'Discovery', description: 'We learn about your business, goals, and users. No assumptions — just questions and listening.', icon: '🔍' },
@@ -11,7 +11,7 @@ const steps = [
   { number: '05', title: 'Support & Growth', description: 'Post-launch monitoring, iterations, and ongoing support as your product evolves.', icon: '📈' },
 ]
 
-export default function ProcessSteps() {
+export default function ProcessStepsSection() {
   const trackRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

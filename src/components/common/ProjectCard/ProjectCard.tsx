@@ -17,6 +17,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           className="card-image"
           width={400}
           height={220}
+          loading="lazy"
         />
       )}
       <div className="card-body">

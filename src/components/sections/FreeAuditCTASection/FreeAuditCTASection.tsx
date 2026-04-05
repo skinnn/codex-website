@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import './FreeAuditCTA.css'
+import './FreeAuditCTASection.css'
 
-interface FreeAuditCTAProps {
+interface FreeAuditCTASectionProps {
   heading?: string
   description?: string
 }
 
-export default function FreeAuditCTA({
+export default function FreeAuditCTASection({
   heading = 'Get a Free SEO Audit',
   description = "Find out what's holding your website back. No strings attached — just actionable insights you can use right away.",
-}: FreeAuditCTAProps) {
+}: FreeAuditCTASectionProps) {
   return (
     <section className="free-audit">
       <div className="container">

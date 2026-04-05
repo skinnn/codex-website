@@ -1,10 +1,7 @@
 import { getServices } from '@/lib/cosmic'
 import ServiceCard from '@/src/components/common/ServiceCard/ServiceCard'
-import PageHero from '@/src/components/layout/PageHero/PageHero'
-import CompanyStats from '@/src/components/common/CompanyStats/CompanyStats'
-import FreeAuditCTA from '@/src/components/common/FreeAuditCTA/FreeAuditCTA'
-import ProcessSteps from '@/src/components/common/ProcessSteps/ProcessSteps'
-import TrustedByClients from '@/src/components/common/TrustedByClients/TrustedByClients'
+import PageHeroSection from '@/src/components/sections/PageHeroSection/PageHeroSection'
+import { CompanyStatsSection, ProcessStepsSection, FreeAuditCTASection } from '@/src/components/sections'
 import { seoDefaults } from '@/src/config/seo-defaults'
 import type { Metadata } from 'next'
 
@@ -15,9 +12,9 @@ export default async function ServicesPage() {
 
   return (
     <>
-      <PageHero title="What We Offer" subtitle="Angular, React, Next.js, React Native — we build with the tools that fit, not the ones that are trendy." />
+      <PageHeroSection title="What We Offer" subtitle="Angular, React, Next.js, React Native — we build with the tools that fit, not the ones that are trendy." />
 
-      <CompanyStats />
+      <CompanyStatsSection />
 
       <section className="section">
         <div className="container">
@@ -29,8 +26,8 @@ export default async function ServicesPage() {
         </div>
       </section>
 
-      <ProcessSteps />
-      <FreeAuditCTA />
+      <ProcessStepsSection />
+      <FreeAuditCTASection />
       {/* <TrustedByClients /> */}
     </>
   )

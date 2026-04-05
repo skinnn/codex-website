@@ -154,11 +154,12 @@ export default function CodeMorphHero({
     window.addEventListener('resize', handleResize)
 
     let animationId: number
-    const clock = new THREE.Clock()
+    const timer = new THREE.Timer()
 
     const animate = () => {
       animationId = requestAnimationFrame(animate)
-      const elapsed = clock.getElapsedTime()
+      timer.update()
+      const elapsed = timer.getElapsed()
 
       clickScatter *= 0.97
 

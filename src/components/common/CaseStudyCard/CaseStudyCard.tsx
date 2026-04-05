@@ -18,6 +18,7 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
             alt={caseStudy.title}
             width={400}
             height={225}
+            loading="lazy"
             className="cs-card__image"
           />
         </div>
